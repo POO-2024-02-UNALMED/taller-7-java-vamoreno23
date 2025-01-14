@@ -60,17 +60,16 @@ public class Tesis extends Escrito{
     }
 
     // Metodos
-
+    @Override
     public int palabrasTotales(int palabrasPorPagina) {
         return palabrasPorPagina * this.getPaginas() * 5; // Factor = 5
     }
 
-    // Método interpretacion
+    @Override
     public String interpretacion() {
         return interpretacion;
     }
-
-    // Método toString
+    
     @Override
     public String toString() {
         return idea + "\n" +

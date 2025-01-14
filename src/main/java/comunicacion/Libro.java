@@ -51,11 +51,11 @@ public class Libro extends Escrito {
 
 
     // Métodos
-
+    @Override
     public int palabrasTotales(int numeroPalabrasPorPagina) {
         return numeroPalabrasPorPagina * this.getPaginas() * 2; // Factor = 2
     }
-
+    @Override
     public String interpretacion() {
         return interpretacion;
     }

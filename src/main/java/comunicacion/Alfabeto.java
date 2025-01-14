@@ -32,6 +32,7 @@ public class Alfabeto extends Pictograma{
     public int cantidadLetras() {
         return letras != null ? letras.length() : 0;
     }
+    @Override
     public String interpretacion() {
         return interpretacion;
     }

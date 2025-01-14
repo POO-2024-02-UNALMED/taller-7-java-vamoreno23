@@ -40,11 +40,12 @@ public class Periodico extends Escrito {
     }
 
     //Metodos
+    @Override
     public int palabrasTotales(int palabrasPorPagina) {
         return palabrasPorPagina * this.getPaginas() * 10; // Factor = 10
     }
 
-    // Método interpretacion
+    @Override
     public String interpretacion() {
         return interpretacion;
     }

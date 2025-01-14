@@ -30,9 +30,11 @@ public class Fabula extends Escrito {
     }
 
     // Métodos
+    @Override
     public int palabrasTotales(int palabrasPorPagina) {
         return palabrasPorPagina * this.getPaginas() * 1; // Factor = 1
     }
+    @Override
     public String interpretacion() {
         return interpretacion;
     }
