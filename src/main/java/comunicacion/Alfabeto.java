@@ -4,21 +4,20 @@ import java.util.ArrayList;
 
 public class Alfabeto extends Pictograma{
     
-    private ArrayList<String> letras;
+    private String[] letras;
     private String interpretacion;
 
-    // el constructor
-    public Alfabeto(String origen, ArrayList<String> letras, String interpretacion) {
+    public Alfabeto(String origen, String[] letras, String interpretacion) {
         super(origen);
         this.letras = letras;
         this.interpretacion= interpretacion;
     }
 
-    public ArrayList<String> getLetras() {
+    public String[] getLetras() {
         return letras;
     }
 
-    public void setLetras(ArrayList<String> letras){
+    public void setLetras(String[] letras){
         this.letras = letras;
     }
 
@@ -30,9 +29,8 @@ public class Alfabeto extends Pictograma{
         this.interpretacion =interpretacion;
     }
 
-    //Metodos
     public int cantidadLetras() {
-        return letras.size();
+        return letras.length;
     }
     
     @Override
@@ -40,12 +38,11 @@ public class Alfabeto extends Pictograma{
         return interpretacion;
     }
 
-    // Método toString que devuelve el alfabeto separado por ", "
     @Override
     public String toString() {   
-        for (int idx = 0; idx < letras.size(); idx++) {
-            System.out.println(letras.get(idx) );
-            if (idx< letras.size() - 1){
+        for (int idx = 0; idx < letras.length; idx++) {
+            System.out.println(letras[idx]);
+            if (idx< letras.length - 1){
                 System.out.println(", ");
             }
         }        

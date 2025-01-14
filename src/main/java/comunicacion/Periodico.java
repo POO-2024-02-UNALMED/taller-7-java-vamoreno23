@@ -6,7 +6,6 @@ public class Periodico extends Escrito {
     private String primicia;
     private String interpretacion;
 
-    // el constructor
     public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia, String interpretacion) {
         super(origen, titulo, autor, paginas);
         this.fecha= fecha;
@@ -39,10 +38,10 @@ public class Periodico extends Escrito {
         this.interpretacion =interpretacion;
     }
 
-    //Metodos
+
     @Override
     public int palabrasTotales(int palabrasPorPagina) {
-        return palabrasPorPagina * this.getPaginas() * 10; // Factor = 10
+        return palabrasPorPagina * this.getPaginas() * 10; 
     }
 
     @Override
@@ -50,7 +49,6 @@ public class Periodico extends Escrito {
         return interpretacion;
     }
 
-    // Método toString
     @Override
     public String toString() {
         return fecha + "\n" +

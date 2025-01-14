@@ -5,7 +5,7 @@ public class Fabula extends Escrito {
     private String ensenanzas;
     private String interpretacion;
 
-    // el constructor
+    
     public Fabula(String origen, String titulo, String autor, int paginas, String ensenanzas, String interpretacion) {
         super(origen, titulo, autor, paginas);
         this.ensenanzas= ensenanzas;
@@ -29,10 +29,10 @@ public class Fabula extends Escrito {
         this.interpretacion =interpretacion;
     }
 
-    // Métodos
+    
     @Override
     public int palabrasTotales(int palabrasPorPagina) {
-        return palabrasPorPagina * this.getPaginas() * 1; // Factor = 1
+        return palabrasPorPagina * this.getPaginas() * 1; 
     }
     @Override
     public String interpretacion() {

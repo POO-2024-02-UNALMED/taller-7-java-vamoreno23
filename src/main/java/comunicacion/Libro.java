@@ -7,7 +7,6 @@ public class Libro extends Escrito {
     private String edicion;
     private String interpretacion;
 
-    // el constructor
     public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial, String edicion, String interpretacion) {
         super(origen, titulo, autor, paginas);
         this.co_autor= co_autor;
@@ -50,10 +49,10 @@ public class Libro extends Escrito {
     }
 
 
-    // Métodos
+    
     @Override
     public int palabrasTotales(int numeroPalabrasPorPagina) {
-        return numeroPalabrasPorPagina * this.getPaginas() * 2; // Factor = 2
+        return numeroPalabrasPorPagina * this.getPaginas() * 2; 
     }
     @Override
     public String interpretacion() {

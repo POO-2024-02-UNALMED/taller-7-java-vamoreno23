@@ -8,7 +8,7 @@ public class Tesis extends Escrito{
     private String referencias;
     private String interpretacion;
 
-    // el constructor
+    
     public Tesis(String origen, String titulo, String autor, int paginas, String idea, String argumentos, String conclusion, String referencias, String interpretacion) {
         super(origen, titulo, autor, paginas);
         this.idea= idea;
@@ -59,10 +59,10 @@ public class Tesis extends Escrito{
         this.interpretacion =interpretacion;
     }
 
-    // Metodos
+    
     @Override
     public int palabrasTotales(int palabrasPorPagina) {
-        return palabrasPorPagina * this.getPaginas() * 5; // Factor = 5
+        return palabrasPorPagina * this.getPaginas() * 5; 
     }
 
     @Override
