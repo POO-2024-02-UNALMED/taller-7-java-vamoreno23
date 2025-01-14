@@ -2,7 +2,6 @@ package comunicacion;
 
 import java.util.ArrayList;
 
-
 public class Alfabeto extends Pictograma{
     
     private String[] letras;
@@ -49,9 +48,5 @@ public class Alfabeto extends Pictograma{
         }
         return abcString.toString();
     }
-
-
-    }
 }
-
 
