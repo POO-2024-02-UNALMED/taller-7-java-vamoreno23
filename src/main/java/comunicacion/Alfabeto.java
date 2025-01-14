@@ -38,18 +38,19 @@ public class Alfabeto extends Pictograma{
     public String interpretacion() {
         return interpretacion;
     }
-
     @Override
-    public String toString() {   
-        ArrayList<String> abc = new ArrayList();
+    public String toString() {
+        StringBuilder abcString = new StringBuilder();
         for (int idx = 0; idx < letras.length; idx++) {
-            abc.add(letras[idx]);
-            if (idx< letras.length - 1){
-                abc.add(", ");
+            abcString.append(letras[idx]);
+            if (idx < letras.length - 1) {
+                abcString.append(", ");
             }
-        } 
-        String abcString = abc.toString();       
-        return abcString;
+        }
+        return abcString.toString();
+    }
+
+
     }
 }
 

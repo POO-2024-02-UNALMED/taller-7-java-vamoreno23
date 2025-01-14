@@ -32,8 +32,9 @@ public class Fabula extends Escrito {
     
     @Override
     public int palabrasTotales(int palabrasPorPagina) {
-        return palabrasPorPagina * this.getPaginas() * 1; 
+        return palabrasPorPagina * this.getPaginas();
     }
+
     @Override
     public String interpretacion() {
         return interpretacion;
@@ -41,6 +42,11 @@ public class Fabula extends Escrito {
 
     @Override
     public String toString() {
-        return ensenanzas;
-    }
+        return this.getOrigen() + "\n" +
+        this.getTitulo() + "\n" +
+        this.getAutor() + "\n" +
+        this.getPaginas() + "\n" +
+        this.getEnsenanzas();
+}
+
 }
