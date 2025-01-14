@@ -1,22 +1,24 @@
 package comunicacion;
 
+import java.util.ArrayList;
+
 public class Alfabeto extends Pictograma{
     
-    private String letras;
+    private ArrayList<String> letras;
     private String interpretacion;
 
     // el constructor
-    public Alfabeto(String origen, String letras, String interpretacion) {
+    public Alfabeto(String origen, ArrayList<String> letras, String interpretacion) {
         super(origen);
-        this.letras= letras;
+        this.letras = letras;
         this.interpretacion= interpretacion;
     }
 
-    public String getLetras() {
+    public ArrayList<String> getLetras() {
         return letras;
     }
 
-    public void setLetras(String letras){
+    public void setLetras(ArrayList<String> letras){
         this.letras = letras;
     }
 
@@ -30,8 +32,9 @@ public class Alfabeto extends Pictograma{
 
     //Metodos
     public int cantidadLetras() {
-        return letras != null ? letras.length() : 0;
+        return letras.size();
     }
+    
     @Override
     public String interpretacion() {
         return interpretacion;
@@ -39,15 +42,14 @@ public class Alfabeto extends Pictograma{
 
     // Método toString que devuelve el alfabeto separado por ", "
     @Override
-    public String toString() {
-        StringBuilder alfabeto = new StringBuilder();
-        for (char letra = 'A'; letra <= 'Z'; letra++) {
-            alfabeto.append(letra).append(", ");
-        }
-        
-        // Eliminar la última coma y el espacio sobrantes
-        alfabeto.setLength(alfabeto.length() - 2);
-        return alfabeto.toString();
+    public String toString() {   
+        for (int idx = 0; idx < letras.size(); idx++) {
+            System.out.println(letras.get(idx) );
+            if (idx< letras.size() - 1){
+                System.out.println(", ");
+            }
+        }        
+        return 
     }
 }
 
