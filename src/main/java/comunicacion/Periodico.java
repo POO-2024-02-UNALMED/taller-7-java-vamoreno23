@@ -1,13 +1,14 @@
 package comunicacion;
 
-public class Periodico {
+public class Periodico extends Escrito {
     
     private String fecha;
     private String primicia;
     private String interpretacion;
 
     // el constructor
-    public Periodico(String fecha, String primicia, String interpretacion) {
+    public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia, String interpretacion) {
+        super(origen, titulo, autor, paginas);
         this.fecha= fecha;
         this.primicia = primicia;
         this.interpretacion= interpretacion;
@@ -40,8 +41,7 @@ public class Periodico {
 
     //Metodos
     public int palabrasTotales(int palabrasPorPagina) {
-        int numeroPaginas = 30; // Supongamos 30 páginas por defecto para periódicos
-        return palabrasPorPagina * numeroPaginas * 10; // Factor = 10
+        return palabrasPorPagina * this.getPaginas() * 10; // Factor = 10
     }
 
     // Método interpretacion

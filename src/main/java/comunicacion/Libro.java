@@ -1,6 +1,6 @@
 package comunicacion;
 
-public class Libro {
+public class Libro extends Escrito {
     
     private String co_autor;
     private String editorial;
@@ -8,7 +8,8 @@ public class Libro {
     private String interpretacion;
 
     // el constructor
-    public Libro(String co_autor, String editorial, String edicion, String interpretacion) {
+    public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial, String edicion, String interpretacion) {
+        super(origen, titulo, autor, paginas);
         this.co_autor= co_autor;
         this.editorial= editorial;
         this.edicion= edicion;
@@ -52,8 +53,7 @@ public class Libro {
     // Métodos
 
     public int palabrasTotales(int numeroPalabrasPorPagina) {
-        int numeroPaginas = 100; // Supongamos 100 páginas por defecto
-        return numeroPalabrasPorPagina * numeroPaginas * 2; // Factor = 2
+        return numeroPalabrasPorPagina * this.getPaginas() * 2; // Factor = 2
     }
 
     public String interpretacion() {

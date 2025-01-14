@@ -1,6 +1,6 @@
 package comunicacion;
 
-public class Tesis {
+public class Tesis extends Escrito{
     
     private String idea;
     private String argumentos;
@@ -9,7 +9,8 @@ public class Tesis {
     private String interpretacion;
 
     // el constructor
-    public Tesis(String idea, String argumentos, String conclusion, String referencias, String interpretacion) {
+    public Tesis(String origen, String titulo, String autor, int paginas, String idea, String argumentos, String conclusion, String referencias, String interpretacion) {
+        super(origen, titulo, autor, paginas);
         this.idea= idea;
         this.argumentos = argumentos;
         this.conclusion = conclusion;
@@ -46,7 +47,7 @@ public class Tesis {
         return referencias;
     }
 
-    public void setConclusion(String referencias) {
+    public void setReferencias(String referencias) {
         this.referencias =referencias;
     }
 
@@ -61,18 +62,21 @@ public class Tesis {
     // Metodos
 
     public int palabrasTotales(int palabrasPorPagina) {
-        int numeroPaginas = 30; // Supongamos 30 páginas por defecto para periódicos
-        return palabrasPorPagina * numeroPaginas * 10; // Factor = 10
+        return palabrasPorPagina * this.getPaginas() * 5; // Factor = 5
     }
 
+    // Método interpretacion
     public String interpretacion() {
         return interpretacion;
     }
 
+    // Método toString
     @Override
     public String toString() {
-        return fecha + "\n" +
-               primicia;
+        return idea + "\n" +
+               argumentos + "\n" +
+               conclusion + "\n" +
+               referencias;
     }
 
 
