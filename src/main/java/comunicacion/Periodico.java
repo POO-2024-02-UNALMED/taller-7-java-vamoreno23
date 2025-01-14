@@ -8,9 +8,9 @@ public class Periodico extends Escrito {
 
     public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia, String interpretacion) {
         super(origen, titulo, autor, paginas);
-        this.fecha= fecha;
+        this.fecha = fecha;
         this.primicia = primicia;
-        this.interpretacion= interpretacion;
+        this.interpretacion = interpretacion;
     }
 
     public String getFecha() {
@@ -21,8 +21,7 @@ public class Periodico extends Escrito {
         this.fecha = fecha;
     }
 
-
-    public String getprimicia() {
+    public String getPrimicia() {
         return primicia;
     }
 
@@ -35,9 +34,8 @@ public class Periodico extends Escrito {
     }
 
     public void setInterpretacion(String interpretacion) {
-        this.interpretacion =interpretacion;
+        this.interpretacion = interpretacion;
     }
-
 
     @Override
     public int palabrasTotales(int palabrasPorPagina) {
@@ -51,11 +49,11 @@ public class Periodico extends Escrito {
 
     @Override
     public String toString() {
-        return this.getOrigen() + "\n" +
-        this.getTitulo() + "\n" +
-        this.getAutor() + "\n" +
-        this.getPaginas() + "\n" +
-        this.getFecha() + "\n" +
-        this.getprimicia();
+        return this.getOrigen() + "\n" + 
+               this.getTitulo() + "\n" + 
+               this.getAutor() + "\n" + 
+               this.getPaginas() + "\n" +
+               fecha + "\n" + 
+               primicia;
     }
 }
